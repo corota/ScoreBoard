@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard App</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- html2canvasの読み込み -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+
+            <div class="input-container">
+                <h3>チーム名を入力</h3>
+                <div class="team-input">
+                    <div class="input-group">
+                        <label for="team1">Team 1 Name:</label>
+                        <input type="text" id="team1" value="三中">
+                    </div>
+                    <div class="input-group">
+                        <label for="team2">Team 2 Name:</label>
+                        <input type="text" id="team2" value="対戦相手">
+                    </div>
+                </div>
+                <button onclick="startGame()">OK</button>
+            </div>
+
+			<div class="score-container" style="display: none;">
+			    <div class="score-board-wrapper">
+			        <div class="set-point">
+			            <div class="set-team-1" id="team1Set">0</div>
+			        </div>
+
+			        <div class="score-board">
+			            <div class="team-1">
+			                <h1 id="team1Name">1</h1>
+			                <div id="team1Score">0</div>
+			            </div>
+
+			            <div class="team-2">
+			                <h1 id="team2Name">2</h1>
+			                <div id="team2Score">0</div>
+			            </div>
+			        </div>
+
+			        <div class="set-point">
+			            <div class="set-team-2" id="team2Set">0</div>
+			        </div>
+			    </div>
+
+			    <!-- ボタンをスコアの下に表示 -->
+				<div class="buttons">
+				    <div class="button-set">
+				        <button onclick="addSetPoint(-1, 'team1')">-1</button>
+				        <button onclick="addSetPoint(1, 'team1')">+1</button>
+				    </div>
+				    
+				    <div class="button-set">
+				        <button onclick="addScore(-1, 'team1')">-1</button>
+				        <button onclick="addScore(1, 'team1')">+1</button>
+				    </div>
+				    
+				    <div class="button-set">
+				        <button onclick="addScore(-1, 'team2')">-1</button>
+				        <button onclick="addScore(1, 'team2')">+1</button>
+				    </div>
+				    
+				    <div class="button-set">
+				        <button onclick="addSetPoint(-1, 'team2')">-1</button>
+				        <button onclick="addSetPoint(1, 'team2')">+1</button>
+				    </div>
+				</div>
+				<div class="buttons">
+				    <div class="button-set">
+					    <button id="recordButton" onclick="toggleRecording()">録画開始</button>
+				        <button onclick="resetScore()">カウンタリセット</button>
+				        <button onclick="resetGame()">ゲーム終了</button>
+				    </div>
+				</div>
+			</div>
+
+        </div>
+
+    </div>
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>

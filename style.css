@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background-blend-mode: normal, lighten, soft-light;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.container > h1 {
+    font-size: 50px;
+}
+
+.team-input {
+    width: 550px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group > input {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+
+.input-container > button {
+    padding: 5px 45px;
+    font-size: 18px;
+    background-color: #434343;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    margin: 10px;
+}
+
+.score-board > div {
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 330px;
+    border-radius: 5px;
+}
+
+#team1Name, #team2Name {
+    font-size: 50px;
+}
+
+#team1Score, #team2Score {
+    font-size: 100px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons > button {
+    font-size: 25px;
+    padding: 5px;
+    width: 60px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.buttons > button:hover {
+    background-color: #505050;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+
+.score-board-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.score-container > button {
+    padding: 5px 45px;
+    font-size: 18px;
+    background-color: #434343;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.score-container > button:hover {
+    background-color: #505050;
+}
+
+.set-point {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.set-point div {
+    font-size: 30px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; /* ボタンセット間のスペースを均等に */
+    margin-top: 20px; /* スコアボードとの間にスペースを作成 */
+    width: 100%; /* ボタンが親要素に合わせて広がる */
+}
+
+.button-set {
+    display: flex; /* 横並びにする */
+    align-items: center; /* ボタンを中央揃え */
+    width: 100%; /* 親要素の幅に合わせる */
+}
+
+.button-set > button {
+    padding: 25px 35px; /* 元のボタンスタイルを適用 */
+    font-size: 18px;
+    background-color: #434343; /* ボタンの背景色を黒に */
+    color: rgb(255, 255, 255); /* ボタンの文字色を白に */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* シャドウ */
+    border-radius: 5px; /* 角を丸くする */
+    margin: 0; /* ボタン間の隙間をなくす */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+.recording {
+    background-color: red !important; /* 録画中の色を赤に */
+}
+
+.button-set > button:hover {
+    background-color: #505050;
+}
